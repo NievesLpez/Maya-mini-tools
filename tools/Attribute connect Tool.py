@@ -1,5 +1,8 @@
 """
-Created by Nieves López (2025 May)
+Created by Nieves López 
+Date: 2025 May
+
+Description : tool that connects an attribute to another attribute of the selected object/s so you can avoid connecting them manually.
 
 """
 
