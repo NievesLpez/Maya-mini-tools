@@ -1,0 +1,64 @@
+
+/*
+Created by Nieves López 
+Date: 2025 May
+
+Description : tool that automatically generates the basic rig structure in the Outliner based on your asset's name and colorizes each group.
+
+*/
+
+//Create simple UI to introduce asset`s name
+
+string $result = `promptDialog 
+    -title "Main structure creator" 
+    -message "Enter characters name:" 
+    -button "Create" 
+    -button "Cancel" 
+    -defaultButton "Create" 
+    -cancelButton "Cancel" 
+    -dismissString "Cancel"`;
+
+// Check if button create is pressed
+
+if ($result == "Create") {
+    string $rootName = `promptDialog -query`;
+    
+    // Only proceed if name is not empty
+
+    if ($rootName != "") {
+
+        // Create groups
+
+        group -em -n "GEO_GRP";
+        group -em -n "CTRL_GRP";
+        group -em -n "SKEL_GRP";
+        group -em -n "RIG_GRP";
+        
+        // Parent SKEL_GRP under RIG_GRP 
+
+        parent "SKEL_GRP" "RIG_GRP";
+        
+        // Parent groups to main(asset)
+
+        group -n $rootName "GEO_GRP" "CTRL_GRP" "RIG_GRP";
+
+        // Colorize Outliner(you can customize colors if needed)
+
+        setAttr "GEO_GRP.useOutlinerColor" 1;  // Green
+        setAttr "GEO_GRP.outlinerColor" 0 1 0;
+        
+        setAttr "CTRL_GRP.useOutlinerColor" 1;  // Yellow
+        setAttr "CTRL_GRP.outlinerColor" 1 1 0;
+        
+        setAttr "RIG_GRP.useOutlinerColor" 1;  // Pink
+        setAttr "RIG_GRP.outlinerColor" 0.74 0 0.75;
+
+        print ("Created hierarchy: " + $rootName + "\n");
+    }
+    else {
+        print ("No name introduced. Operation cancelled.\n");
+    }
+}
+else {
+    print ("User cancelled. No groups created.\n");
+}
