@@ -13,3 +13,7 @@ Description: tool that connects an attribute to another attribute of the selecte
 ### 02: Base rig Outliner structure creator {MEL}
 
 Description: tool that automatically generates the basic rig structure in the Outliner based on your asset's name and colorizes each group.
+
+### 03: GRP generator for multiple objects
+
+Description: Tool that creates main control rig groups to any selected object/s on the scene, matching pivot position - combine with automatic control creator pero object for optimized pipeline.
