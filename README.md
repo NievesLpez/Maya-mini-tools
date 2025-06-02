@@ -4,6 +4,10 @@
 
 Maya mini tools that solve simple problems that I have encountered (mainly task automatization for rigging)
 
+## Instructions:
+
+Simply drag and drop from python/mel script editor to shelf or execute directly
+
 ---
 
 ### 01: Attribute connector tool {python}
