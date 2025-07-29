@@ -3,7 +3,7 @@ Author: Nieves López
 
 May 2025
 
-Description : For selected objects (CTRLS) creates the main CTRL structure.
+Description : For selected NURBS shapes creates the main CTL structure and adds ?CTL suffix. Just name your desired curved and done.
 """
 import maya.cmds as cmds
 
