@@ -18,6 +18,10 @@ Description: tool that connects an attribute to another attribute of the selecte
 
 Description: tool that automatically generates the basic rig structure in the Outliner based on your asset's name and colorizes each group.
 
-### 03: GRP generator for multiple objects {python}
+### 03: GRP generator for multiple curves {python}
 
-Description: Tool that creates main control rig groups to any selected object/s on the scene, matching pivot position - combine with automatic control creator pero object for optimized pipeline.
+Description: For selected NURBS shapes, creates the main control structure and adds a CTL suffix. Simply name your desired curve and you're done
+
+### 04: GRP generator for multiple objects {python}
+
+Description: Creates a NURBS curve and its control hierarchy for selected objects, using each object's name and position.
