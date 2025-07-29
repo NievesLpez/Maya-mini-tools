@@ -1,7 +1,10 @@
+"""
+Author: Nieves López
 
+June 2025
 
-
-
+Description : Creates a NURBS curve and its control hierarchy for selected objects, using each object's name and position.
+"""
 
 import maya.cmds as cmds
 
