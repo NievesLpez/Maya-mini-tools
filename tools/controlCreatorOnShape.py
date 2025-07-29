@@ -3,7 +3,7 @@ Author: Nieves López
 
 May 2025
 
-Description : For selected NURBS shapes creates the main CTL structure and adds ?CTL suffix. Just name your desired curved and done.
+Description : For selected NURBS shapes, creates the main control structure and adds a CTL suffix. Simply name your desired curve and you're done
 """
 import maya.cmds as cmds
 
