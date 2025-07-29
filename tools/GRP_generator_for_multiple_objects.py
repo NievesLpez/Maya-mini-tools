@@ -13,7 +13,7 @@ if len(selObj) == 0:
 else:
     for i in range(len(selObj)):
         
-        # Get the values of the object
+        # Get the position and pivot of the selection
         objRot = cmds.xform(selObj[i], q=True, ws=True, ro=True)
         objTrans = cmds.xform(selObj[i], q=True, ws=True, t=True)
         objScale = cmds.xform(selObj[i], q=True, r=True, s=True)
@@ -50,6 +50,6 @@ else:
         cmds.xform(GRP5, p=True, ws=True, rp=objWSRotPivot, sp=objWSScalePivot)
         cmds.parent(GRP4, GRP5)
         
-        cmds.rename(selObj[i], f"{selObj[i]}_CRV")
+        cmds.rename(selObj[i], f"{selObj[i]}_CTL")
 
 cmds.select(cl=True)
